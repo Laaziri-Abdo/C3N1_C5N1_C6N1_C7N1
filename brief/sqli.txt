@@ -1,0 +1,22 @@
+CREATE DATABASE brief;
+
+CREATE TABLE register(
+  id int(11) AUTO_INCREMENT PRIMARY KEY,
+  nom varchar(255) NOT NULL,
+  prenom varchar(255)NOT NULL,
+  email varchar(255) NOT NULL,
+ password varchar(255) NOT NULL
+) ;
+
+
+
+
+CREATE TABLE competence (
+  id int(11)NOT NULL,
+  java int(11)NOT NULL,
+  js int(11)NOT NULL,
+php int(11)NOT NULL,
+  html int(11) NOT NULL,
+cgi int(11)NOT NULL,
+   FOREIGN KEY (id) REFERENCES register(id)
+)
